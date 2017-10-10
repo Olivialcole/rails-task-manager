@@ -1,0 +1,10 @@
+<h1>Details</h1>
+
+
+<!-- needs to display the task details (title, description) -->
+<h1><%= @task.title %></h1>
+<h2><%= @task.description%></h2>
+<p><%= link_to "Edit Task", edit_task_path(@task) %></p>
+
+<p><%= link_to "Delete", task_path(@task), method: :delete, data: { confirm: "You Sure?" } %></p>
+<p><%= link_to "Back to List", tasks_path(@tasks) %></p>

@@ -1,0 +1,23 @@
+<h1>Tasks#new</h1>
+<p>Find me in app/views/tasks/new.html.erb</p>
+
+<!-- <form action="/tasks" method="post">
+  <label for="title">title: </label>
+  <input type="text" title="tasks[title]" id="title">
+
+  <label for="description">description: </label>
+  <input type="text" title="tasks[description]" id="description">
+
+  <input type="submit">
+</form>
+ -->
+
+ <%= form_for(@tasks) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit %>
+<% end %>
